@@ -1,5 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:700,700italic&subset=latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext);
+@import 'reset.css';
+$accentColor: #1a64b9;
+$borderStyle: 1px solid #eee;
+$cardBgColor: #fff;
+$fontSerif: lora, 'book antiqua', 'times new roman', serif;
+$fontSansSerif: 'roboto condensed', 'helvetica neue', helvetica, sans-serif;
+$mainBlockWidth: 80%;
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-weight: normal;
+    font-size: 1.4em;
+    line-height: 1.8em;
+}
+h2 {
+    font-weight: normal;
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
 html {
-  font: 14pt/1.1em 'helvetica neue', helvetica, arial, sans-serif;
-  background-color: #eee;
-  transition: all .5s linear;
+    background-color: #ffe1ad;
+    color: #222;
+    font: normal 11pt/1.1em $fontSerif;
+}
+.postType {
+    display: block;
+    color: #999;
+    border-top: 2px solid #999;
+    font-family: $fontSansSerif;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 7px;
+}
+#mainHeader {
+    background-color: $cardBgColor;
+    border-bottom: $borderStyle;
+    font-family: $fontSansSerif;
+    #logo {
+        font-size: 25pt;
+        line-height: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #addNew {
+        width: 30px;
+        height: 30px;
+        color: white;
+        background-color: #00e;
+        border-radius: 50%;
+        font-size: 15pt;
+        line-height: 1em;
+        padding: 6px;
+    }
+    & > div {
+        width: $mainBlockWidth * 0.8;
+        margin: 0 auto;
+        padding: 25px 0 15px;
+        .search {
+            & > div {
+                display: block;
+            }
+            input {
+                display: inline-block;
+                border: 1px solid #ccc;
+                font-size: 1.2em;
+                padding: 10px 15px;
+                box-sizing: border-box;
+                &[type="search"] {
+                    width: 84%;
+                    background-color: #f7f7f7;
+                }
+                &[type="submit"] {
+                    width: 15%;
+                    color: #999;
+                    background-color: white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .sortBy {
+            font-size: 0.9em;
+            font-family: $fontSerif;
+            font-style: italic;
+            * {
+                display: inline;
+            }
+            li:last-child::before {
+                content: 'or ';
+            }
+        }
+    }
+}
+#main {
+    width: $mainBlockWidth;
+    background-color: $cardBgColor;
+    padding: 0 30px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    .card {
+        width: 80%;
+        display: flex;
+        border: $borderStyle;
+        box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .1);
+        padding-bottom: 60px;
+        margin: 0 auto;
+        &.moreItems {
+            a {
+                display: block;
+                color: #a00;
+                font: bold 1.4em/1em $fontSansSerif;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+        }
+        & > div {
+            width: 80%;
+        }
+        & > aside {
+            width: 20%;
+            align-self: flex-end;
+            color: #666;
+            font-style: italic;
+            padding-left: 30px;
+            em {
+                font-style: normal;
+                padding-right: 3px;
+            }
+            li {
+                padding: 20px 0;
+            }
+        }
+    }
+    .question {
+        a {
+            color: $accentColor;
+            text-decoration: none;
+        }
+        img[src^="assets/res/images/avatars/"] {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        ul,
+        ul > li {
+            list-style-type: none;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #dff3fd;
+            hgroup {
+                padding: 35px;
+                h1 {
+                    font-style: italic;
+                }
+                h2 {
+                    color: #888;
+                    font-family: $fontSansSerif;
+                    text-transform: uppercase;
+                    a {
+                        font-size: 1.25em;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+        .activities {
+            padding: 20px 0 0 20px;
+            li {
+                width: 90px;
+                height: 100%;
+                display: inline-block;
+                background-color: #eee;
+                padding: 15px;
+                margin: 5px;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    background-color: #aaa;
+                    border-radius: 50%;
+                    margin-left: -6px;
+                    position: absolute;
+                    bottom: -6px;
+                    left: 50%;
+                }
+                &.answered {
+                    &::after {
+                        background-color: #444;
+                    }
+                    .postType {
+                        border-color: #444;
+                    }
+                }
+                &.moreItems {
+                    background-color: white;
+                    font: bold italic inherit/inherit $fontSerif;
+                    font-style: italic;
+                    text-align: center;
+                    &::after {
+                        display: none;
+                    }
+                    em {
+                        display: block;
+                        margin: 15px 0 60px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: 15px auto 60px;
+                }
+            }
+        }
+    }
 }

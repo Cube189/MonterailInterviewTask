@@ -1,0 +1,64 @@
+<article class="card question" ng-repeat="question in questions">
+    <div>
+        <header>
+            <img src="assets/res/images/avatars/StickerBoy.png" alt="StickerBoy"/>
+            <hgroup>
+                <h2>
+                    <a href="">{{ question.author }}</a>
+                    is asking</h2>
+                <h1>
+                    <a href="">{{ question.title }}</a>
+                </h1>
+            </hgroup>
+            <footer class="postType">
+                Asked
+            </footer>
+        </header>
+
+        <div class="activities">
+            <ul>
+                <li class="answered">
+                    <a href=""><img src="assets/res/images/avatars/TheDonald.png" alt="TheDonald"/>
+                        <span class="postType">Answered</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="assets/res/images/avatars/Hillary.png" alt="Hillary"/>
+                        <span class="postType">Commented</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="assets/res/images/avatars/FeelTheBern2016.png" alt="FeelTheBern2016"/>
+                        <span class="postType">Commented</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="assets/res/images/avatars/Teddy323.png" alt="Teddy323"/>
+                        <span class="postType">Commented</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <aside>
+        <ul>
+            <li>
+                <em>1</em>
+                related discussion</li>
+            <li>
+                <em>2</em>
+                peers involved</li>
+            <li>
+                <em>3</em>
+                conversations</li>
+        </ul>
+    </aside>
+</article>
+
+<footer>
+    <a href="">Load more questions&hellip;</a>
+</footer>

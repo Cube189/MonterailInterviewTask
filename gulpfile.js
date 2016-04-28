@@ -1,14 +1,22 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
+var browserSync = require('browser-sync');
 var gulp_uglify = require('gulp-uglify');
 var gulp_compile_sass = require('gulp-sass');
-// var gulp_live_reload = require('gulp-livereload');
+var gulp_live_reload = require('gulp-livereload');
 var gulp_autoprefixer = require('gulp-autoprefixer');
 
 
-// gulp.task('livereload', function() {
-//
-// });
+gulp.task('browsersync', function() {
+    browserSync({
+        server: {
+            baseDir: './'
+        },
+        open: false,
+        online: false,
+        notify: false,
+    });
+});
 
 gulp.task('compile_sass', function() {
     gulp.src('assets/sass/**/*.scss')
@@ -50,18 +58,15 @@ gulp.task('uglify', function() {
 gulp.task('default', [
     'uglify',
     'compile_sass',
-    // 'livereload'
+    'browsersync'
 ]);
 
 
 
 gulp.task('watch', function() {
-    // gulp_live_reload.listen();
-    // // var server = gulp_live_reload();
-
     gulp.watch('assets/js/*.js', ['uglify']);
 
     gulp.watch('assets/sass/**/*.scss', ['compile_sass']);
 
-    // gulp.watch('**/*.*', ['livereload']);
+    gulp.watch('**/*.*', ['browsersync']);
 });
