@@ -23,8 +23,6 @@
             </aside>
 
             <div class="search">
-                <form action="get">
-
                     <label>
                         <input type="radio" name="scope" value="shelf" checked> My shelf
                     </label>
@@ -33,18 +31,16 @@
                     </label>
 
                     <div>
-                        <input type="search" name="query" placeholder="Search questions">
+                        <input type="search" placeholder="Search questions" ng-model="searchQuery">
                         <input type="submit" value="Search">
                     </div>
-
-                </form>
             </div>
         </div>
     </header>
 
 
     <section id="main">
-        <article class="card question" ng-repeat="question in questions">
+        <article class="card question" ng-repeat="question in questions | lookup: searchQuery track by $index">
             <div>
                 <header>
                     <a href="profile.html">
