@@ -1,4 +1,4 @@
-You can see the site in action at https://cube189.github.io/MonterailsInterviewTask/
+You can see the site in action at https://cube189.github.io/MonterailInterviewTask/
 
 This is description of tasks that are used in our evaluation process. We wanted to create an opportunity for you to show us your skills and work style, but also to present knowledge and familiarity of tools and technology - both of HTML markup with CSS stylesheets, and Javascript frameworks.
 
