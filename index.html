@@ -14,26 +14,29 @@
 
             <button id="addNew">+</button>
 
-            <aside class="sortBy">
-                <em>Sort by:</em>
-                <ul>
-                    <li><a href="">recent</a></li>
-                    <li><a href="">hot</a></li>
-                </ul>
-            </aside>
-
             <div class="search">
-                    <label>
-                        <input type="radio" name="scope" value="shelf" checked> My shelf
-                    </label>
-                    <label>
-                        <input type="radio" name="scope" value="all"> All questions
-                    </label>
 
-                    <div>
+                <div>
+                    <div id="showBox">
+                        <label>
+                            <input type="radio" name="scope" value="shelf" checked> My shelf
+                        </label>
+                        <label>
+                            <input type="radio" name="scope" value="all"> All questions
+                        </label>
+                    </div>
+                    <aside id="sortBox">
+                        <em>Sort by:</em>
+                        <ul>
+                            <li><a href="">recent</a></li>
+                            <li><a href="">hot</a></li>
+                        </ul>
+                    </aside>
+                    <div id="searchBox">
                         <input type="search" placeholder="Search questions" ng-model="searchQuery">
                         <input type="submit" value="Search">
                     </div>
+                </div>
             </div>
         </div>
     </header>
@@ -44,7 +47,7 @@
             <div>
                 <header>
                     <a href="profile.html">
-                        <img src="assets/res/images/avatars/{{ question.author.name }}.png" alt="{{ question.author.name }}" />
+                        <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ question.author.name }}" />
                     </a>
                     <hgroup>
                         <h2>
@@ -66,7 +69,7 @@
                         </li>
                         <li ng-repeat="activity in question.activities | limitTo: 4 : 0" ng-class="{answered: activity.answered}">
                             <a href="profile.html">
-                                <img src="assets/res/images/avatars/{{ activity.author }}.png" alt="{{ activity.author }}" />
+                                <img ng-src="assets/res/images/avatars/{{ activity.author }}.png" alt="{{ activity.author }}" />
                                 <span class="postType">{{ (activity.answered)? "Answered" : "Commented" }}</span>
                             </a>
                         </li>

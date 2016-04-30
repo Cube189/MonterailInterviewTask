@@ -73,6 +73,104 @@
                     author: 'iLuvAlaska',
                     answered: false
                 }]
+            }, {
+                title: 'Grab the book nearest to you, turn to page 18, and find line 4.',
+                author: {
+                    name: 'Joseph',
+                    profileId: 3
+                },
+                questionId: 1,
+                activities: [{
+                    author: 'Stallion08',
+                    answered: false
+                }, {
+                    author: 'FeelTheBern2016',
+                    answered: true
+                }, {
+                    author: 'iLuvAlaska',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }]
+            }, {
+                title: 'Stretch your left arm out as far as you can, What can you touch?',
+                author: {
+                    name: 'Joseph',
+                    profileId: 3
+                },
+                questionId: 1,
+                activities: [{
+                    author: 'Stallion08',
+                    answered: false
+                }, {
+                    author: 'FeelTheBern2016',
+                    answered: true
+                }, {
+                    author: 'iLuvAlaska',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }]
+            }, {
+                title: 'Before you started this survey, what were you doing?',
+                author: {
+                    name: 'Joseph',
+                    profileId: 3
+                },
+                questionId: 1,
+                activities: [{
+                    author: 'Stallion08',
+                    answered: false
+                }, {
+                    author: 'FeelTheBern2016',
+                    answered: true
+                }, {
+                    author: 'iLuvAlaska',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }]
+            }, {
+                title: 'What is the last thing you watched on TV?',
+                author: {
+                    name: 'Joseph',
+                    profileId: 3
+                },
+                questionId: 1,
+                activities: [{
+                    author: 'Stallion08',
+                    answered: false
+                }, {
+                    author: 'FeelTheBern2016',
+                    answered: true
+                }, {
+                    author: 'iLuvAlaska',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }, {
+                    author: 'TheDonald',
+                    answered: false
+                }]
             }];
         })
 
@@ -89,8 +187,8 @@
             results = [];
 
             angular.forEach(data, function(i) {
-                console.log(i);
                 if (i.title.toLowerCase().indexOf(query) > -1) {
+                    console.log(query + ': ' + i.title);
                     results.push(i);
                 }
             });

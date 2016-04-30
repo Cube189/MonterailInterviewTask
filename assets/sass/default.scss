@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:700,700italic&subset=latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext);
-@import 'reset.css';
+@import '_reset';
 $accentColor: #1a64b9;
 $borderStyle: 1px solid #eee;
 $cardBgColor: #fff;
@@ -26,6 +26,21 @@ html {
     color: #222;
     font: normal 11pt/1.1em $fontSerif;
 }
+input[type="radio"]::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 3px;
+    transition: all 0.2s ease-in;
+}
+input[type="radio"]:checked::before {
+    background-color: black;
+    box-shadow: inset 0 0 0 1px white;
+}
 .postType {
     display: block;
     color: #999;
@@ -40,6 +55,10 @@ html {
     background-color: $cardBgColor;
     border-bottom: $borderStyle;
     font-family: $fontSansSerif;
+    #addNew,
+    #logo {
+        display: inline-block;
+    }
     #logo {
         font-size: 25pt;
         line-height: 1em;
@@ -50,48 +69,76 @@ html {
         width: 30px;
         height: 30px;
         color: white;
-        background-color: #00e;
+        background-color: #33f;
         border-radius: 50%;
         font-size: 15pt;
-        line-height: 1em;
-        padding: 6px;
+        line-height: 0;
+        text-align: center;
+        vertical-align: top;
+        margin: 0 20px;
     }
     & > div {
         width: $mainBlockWidth * 0.8;
         margin: 0 auto;
         padding: 25px 0 15px;
+        & > div {
+            width: 100%;
+        }
         .search {
-            & > div {
-                display: block;
+            #showBox,
+            #sortBox {
+                display: inline-flex;
+                padding: 15px 0;
             }
-            input {
+            #sortBox {
+                width: 25%;
+                color: #888;
+                font-size: 0.9em;
+                font-family: $fontSerif;
+                font-style: italic;
+                letter-spacing: .5px;
+                * {
+                    display: inline;
+                }
+                a {
+                  color: $accentColor;
+                  font-family: $fontSansSerif;
+                  font-style: normal;
+                  text-decoration: none;
+                  padding: 0 5px;
+                }
+                li:last-child::before {
+                    content: 'or ';
+                }
+            }
+            #showBox {
+                width: 74%;
+                text-align: right;
+            }
+            #searchBox {}
+            input:not([type="radio"]) {
                 display: inline-block;
                 border: 1px solid #ccc;
                 font-size: 1.2em;
                 padding: 10px 15px;
                 box-sizing: border-box;
                 &[type="search"] {
-                    width: 84%;
+                    width: 74%;
                     background-color: #f7f7f7;
                 }
                 &[type="submit"] {
-                    width: 15%;
+                    width: 25%;
                     color: #999;
                     background-color: white;
                     font-weight: bold;
                     text-transform: uppercase;
                 }
             }
-        }
-        .sortBy {
-            font-size: 0.9em;
-            font-family: $fontSerif;
-            font-style: italic;
-            * {
-                display: inline;
+            label {
+                margin-right: 20px;
             }
-            li:last-child::before {
-                content: 'or ';
+            label:last-child {
+                margin: 0;
             }
         }
     }
@@ -110,12 +157,14 @@ html {
         padding-bottom: 60px;
         margin: 0 auto;
         &.moreItems {
+            padding: 0;
             a {
                 display: block;
                 color: #a00;
                 font: bold 1.4em/1em $fontSansSerif;
                 text-decoration: none;
                 text-transform: lowercase;
+                padding: 40px 20px;
             }
         }
         & > div {
