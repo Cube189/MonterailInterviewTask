@@ -8,59 +8,72 @@
     "activities": [{
         "author": "Hillary",
         "profileId": 5,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "FeelTheBern2016",
         "profileId": 7,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "Teddy323",
         "profileId": 8,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "KasichForPresident16",
         "profileId": 10,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "Vegan diet in diabetes treatment?",
     "author": {
         "name": "Andrew",
-        "profileId": 2
+        "profileId": 2,
+        "content": "Lorem ipsum dolor sit amet"
     },
     "questionId": 2,
     "activities": [{
         "author": "KasichForPresident16",
         "profileId": 10,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "Hillary",
         "profileId": 5,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "Teddy323",
         "profileId": 8,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "Vegan diet to stop diabetes progress",
@@ -72,15 +85,18 @@
     "activities": [{
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "FeelTheBern2016",
         "profileId": 7,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "I believe, I believe every day is a good day when you paint.",
@@ -92,43 +108,53 @@
     "activities": [{
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "Stretch your left arm out as far as you can, What can you touch?",
@@ -140,23 +166,28 @@
     "activities": [{
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "FeelTheBern2016",
         "profileId": 7,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "Before you started this survey, what were you doing?",
@@ -168,27 +199,33 @@
     "activities": [{
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "FeelTheBern2016",
         "profileId": 7,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }, {
     "title": "What is the last thing you watched on TV?",
@@ -200,30 +237,37 @@
     "activities": [{
         "author": "idocare08",
         "profileId": 11,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "FeelTheBern2016",
         "profileId": 7,
-        "answered": true
+        "answered": true,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "iLuvAlaska",
         "profileId": 9,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }, {
         "author": "TheDonald",
         "profileId": 6,
-        "answered": false
+        "answered": false,
+        "content": "Lorem ipsum dolor sit amet"
     }]
 }]

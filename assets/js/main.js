@@ -46,8 +46,20 @@
         // console.log($scope.seenDaysAgo);
     })
 
-    .controller('QuestionController', function($scope, $routeParams) {
-
+    .controller('QuestionController', function($scope, $routeParams, $http) {
+        $http.get('/assets/js/questions.json')
+            .success(function(results) {
+                for (i = 0; i < results.length; i++) {
+                    var item = results[i];
+                    if ($routeParams.questionId == item.questionId) {
+                        $scope.question = item;
+                    }
+                }
+            })
+            .error(function(result, error) {
+                $scope.question.title = "Error";
+                console.log("Error: " + error);
+            });
     });
 
     // Searching impl (task 6)
