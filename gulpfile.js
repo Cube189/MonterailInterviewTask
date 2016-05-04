@@ -47,10 +47,10 @@ gulp.task('uglify', function() {
         .pipe(plumber())
         .pipe(gulp_uglify())
         .pipe(gulp.dest('assets/minjs'));
-    gulp.src('assets/css/*.css')
-        .pipe(plumber())
-        .pipe(gulp_uglify())
-        .pipe(gulp.dest('assets/css'));
+    // gulp.src('assets/css/*.css')
+        // .pipe(plumber())
+        // .pipe(gulp_uglify())
+        // .pipe(gulp.dest('assets/css'));
 });
 
 
@@ -58,17 +58,17 @@ gulp.task('uglify', function() {
 gulp.task('default', [
     'uglify',
     'compile_sass',
-    // 'browsersync'
+    'browsersync'
 ]);
 
 
 
-gulp.task('watch', function() {
+gulp.task('watch', function() {    
     gulp.watch('assets/js/*.js', ['uglify']);
 
     gulp.watch('assets/sass/**/*.scss', ['compile_sass']);
 
-    // gulp.watch('**/*.*', ['browsersync']);
+    gulp.watch('**/*.*', ['browsersync']);
 });
 
 gulp.task('watch_sass', function() {

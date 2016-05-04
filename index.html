@@ -42,57 +42,10 @@
     </header>
 
 
-    <section id="main">
-        <article class="card question" ng-repeat="question in questions | lookup: searchQuery track by $index">
-            <div>
-                <header>
-                    <a href="profile.html">
-                        <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ question.author.name }}" />
-                    </a>
-                    <hgroup>
-                        <h2>
-                          <a href="profile.html">{{ question.author.name }}</a>
-                          is asking</h2>
-                        <h1>
-                          <a href="question.html">{{ question.title }}</a>
-                      </h1>
-                    </hgroup>
-                    <footer class="postType">
-                        Asked
-                    </footer>
-                </header>
-
-                <div class="activities">
-                    <ul>
-                        <li ng-show="question.activities.length > 4" class="moreItems">
-                            <em>{{ question.activities.length - 4 }}</em> more activities
-                        </li>
-                        <li ng-repeat="activity in question.activities | limitTo: 4 : 0" ng-class="{answered: activity.answered}">
-                            <a href="profile.html">
-                                <img ng-src="assets/res/images/avatars/{{ activity.author }}.png" alt="{{ activity.author }}" />
-                                <span class="postType">{{ (activity.answered)? "Answered" : "Commented" }}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <aside>
-                <ul>
-                    <li>
-                        <em>1</em> related discussion</li>
-                    <li>
-                        <em>2</em> peers involved</li>
-                    <li>
-                        <em>3</em> conversations
-                    </li>
-                </ul>
-            </aside>
-        </article>
-
-        <footer class="card moreItems">
-            <a href="">Load more questions&hellip;</a>
-        </footer>
+    <section id="main" ng-view>
+      <noscript>
+        <p>Sorry, JavaScript is essential for this page to work</p>
+      </noscript>
     </section>
 
 

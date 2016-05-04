@@ -1,183 +1,64 @@
 (function() {
     var app = angular.module("app", ['ngRoute']);
 
-
+    // Dynamic data impl (task 4)
     app
-        .controller('MainController', function($scope, $routeParams) {
-            $scope.questions = [{
-                title: 'Will insulin make my patient gain weight?',
-                author: {
-                    name: 'StickerBoy',
-                    profileId: 1
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Hillary',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: true
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: false
-                }, {
-                    author: 'Teddy323',
-                    answered: false
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'KasichForPresident16',
-                    answered: false
-                }]
-            }, {
-                title: 'Vegan diet in diabetes treatment?',
-                author: {
-                    name: 'Andrew',
-                    profileId: 2
-                },
-                questionId: 2,
-                activities: [{
-                    author: 'KasichForPresident16',
-                    answered: false
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'Hillary',
-                    answered: true
-                }, {
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'Teddy323',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }]
-            }, {
-                title: 'Vegan diet to stop diabetes progress',
-                author: {
-                    name: 'Joseph',
-                    profileId: 3
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: true
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }]
-            }, {
-                title: 'Grab the book nearest to you, turn to page 18, and find line 4.',
-                author: {
-                    name: 'Joseph',
-                    profileId: 3
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: true
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }]
-            }, {
-                title: 'Stretch your left arm out as far as you can, What can you touch?',
-                author: {
-                    name: 'Joseph',
-                    profileId: 3
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: true
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }]
-            }, {
-                title: 'Before you started this survey, what were you doing?',
-                author: {
-                    name: 'Joseph',
-                    profileId: 3
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: true
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }]
-            }, {
-                title: 'What is the last thing you watched on TV?',
-                author: {
-                    name: 'Joseph',
-                    profileId: 3
-                },
-                questionId: 1,
-                activities: [{
-                    author: 'Stallion08',
-                    answered: false
-                }, {
-                    author: 'FeelTheBern2016',
-                    answered: true
-                }, {
-                    author: 'iLuvAlaska',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }, {
-                    author: 'TheDonald',
-                    answered: false
-                }]
-            }];
+        .controller('MainController', function($scope, $routeParams, $http) {
+            $http.get('/assets/js/questions.json')
+                .success(function(results) {
+                    $scope.questions = results;
+                })
+                .error(function(results, error) {
+                  $scope.questions = results;
+                  console.log("Error: " + error);
+                });
+
         })
 
-    .controller('ProfileController', function($scope, $routeParams) {
+    .controller('ProfileController', function($scope, $routeParams, $http) {
+        // // profiles = [{
+        // //     profileId: 1
+        // // }, {
+        // //     profileId: 2
+        // // }, {
+        // //     profileId: 3
+        // // }, {
+        // //     profileId: 4
+        // // }];
+        // profiles = [1, 2, 3, 4, 5];
+        //
+        // for (i = 0; i < profiles.length; i++) {
+        //   var item = profiles[i];
+        //   if ($routeParams.profileId == item) {
+        //     $scope.profileId = item;
+        //   }
+        //   else {
+        //     $scope.profileId = 99;
+        //   }
+        // }
+        // // $scope.profile = profiles[$routeParams.profileId - 1];
+
+        $http.get('/assets/js/profiles.json')
+            .success(function(results) {
+                for (i = 0; i < results.length; i++) {
+                  var item = results[i];
+                  if ($routeParams.profileId == item.profileId) {
+                    $scope.profile = item;
+                    console.log(item);
+                  }
+                }
+            })
+            .error(function(result, error) {
+                $scope.profile = "Error";
+                console.log("Error: " + error);
+            });
+    })
+
+    .controller('QuestionController', function($scope, $routeParams) {
 
     });
 
+    // Searching impl (task 6)
     app.filter('lookup', function() {
         return function(data, query) {
             if (query === '' || query === undefined) {
@@ -197,26 +78,27 @@
         };
     });
 
-
-    app.config(function($routeProvider, $locationProvider) {
-        $locationProvider.hashPrefix('!');
+    // Routing impl (task 8)
+    app.config(function($routeProvider) {
         $routeProvider
-            .when('/home', {
-                templateUrl: 'routes/home.html',
-                controller: 'HomeController'
+            .when('/', {
+                templateUrl: '../routes/home.html',
             })
             .when('/question/:questionId', {
-                templateUrl: 'routes/question.html',
+                templateUrl: '../routes/question.html',
                 controller: 'QuestionController'
             })
-            .when('profile/:profileId', {
-                templateUrl: 'routes/profile.html',
+            .when('/profile/:profileId', {
+                templateUrl: '../routes/profile.html',
                 controller: 'ProfileController'
+            })
+            .otherwise({
+                redirectTo: '/'
             });
     });
 
 
-
+    // // Module impl (task 3)
     // angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
     //
     //     $scope.items = ['item1', 'item2', 'item3'];

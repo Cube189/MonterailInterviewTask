@@ -52,7 +52,7 @@ All questions view has search form. Use it for implementing simple search system
 
 Single question view contains comments and answers with voting component. Implement voting component, so viewer can rate entries as helpful or not.
 
-**Task 8: Add routing**
+**Task 8: Add routing (done)**
 
 If so far views were connected just by standard hyperlinks, now it's time to go SPA way - combine all views in single app and make them switch without reloading browser.
 

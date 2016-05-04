@@ -1,14 +1,16 @@
-<article class="card question" ng-repeat="question in questions">
+<article class="card question" ng-repeat="question in questions | lookup: searchQuery track by $index">
     <div>
         <header>
-            <img src="assets/res/images/avatars/StickerBoy.png" alt="StickerBoy"/>
+            <a ng-href="#/profile/{{ question.author.profileId }}">
+                <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ question.author.name }}" />
+            </a>
             <hgroup>
                 <h2>
-                    <a href="">{{ question.author }}</a>
-                    is asking</h2>
+                  <a ng-href="#/profile/{{ question.author.profileId }}">{{ question.author.name }}</a>
+                  is asking</h2>
                 <h1>
-                    <a href="">{{ question.title }}</a>
-                </h1>
+                  <a href="#/question">{{ question.title }}</a>
+              </h1>
             </hgroup>
             <footer class="postType">
                 Asked
@@ -17,27 +19,13 @@
 
         <div class="activities">
             <ul>
-                <li class="answered">
-                    <a href=""><img src="assets/res/images/avatars/TheDonald.png" alt="TheDonald"/>
-                        <span class="postType">Answered</span>
-                    </a>
+                <li ng-show="question.activities.length > 4" class="moreItems">
+                    <em>{{ question.activities.length - 4 }}</em> more activities
                 </li>
-                <li>
-                    <a href="">
-                        <img src="assets/res/images/avatars/Hillary.png" alt="Hillary"/>
-                        <span class="postType">Commented</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="assets/res/images/avatars/FeelTheBern2016.png" alt="FeelTheBern2016"/>
-                        <span class="postType">Commented</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="assets/res/images/avatars/Teddy323.png" alt="Teddy323"/>
-                        <span class="postType">Commented</span>
+                <li ng-repeat="activity in question.activities | limitTo: 4 : 0" ng-class="{answered: activity.answered}">
+                    <a ng-href="#/profile/{{ activity.profileId }}">
+                        <img ng-src="assets/res/images/avatars/{{ activity.author }}.png" alt="{{ activity.author }}" />
+                        <span class="postType">{{ (activity.answered)? "Answered" : "Commented" }}</span>
                     </a>
                 </li>
             </ul>
@@ -47,18 +35,16 @@
     <aside>
         <ul>
             <li>
-                <em>1</em>
-                related discussion</li>
+                <em>1</em> related discussion</li>
             <li>
-                <em>2</em>
-                peers involved</li>
+                <em>2</em> peers involved</li>
             <li>
-                <em>3</em>
-                conversations</li>
+                <em>3</em> conversations
+            </li>
         </ul>
     </aside>
 </article>
 
-<footer>
+<footer class="card moreItems">
     <a href="">Load more questions&hellip;</a>
 </footer>
