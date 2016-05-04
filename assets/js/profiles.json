@@ -1,35 +1,408 @@
 [{
     "profileId": 1,
-    "name": "StickerBoy"
-
+    "name": "StickerBoy",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 2,
-    "name": "Andrew"
+    "name": "Andrew",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 3,
-    "name": "Joseph"
+    "name": "Joseph",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 4,
-    "name": "HappyLittleMe"
+    "name": "HappyLittleMe",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 5,
-    "name": "Hillary"
+    "name": "Hillary",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 6,
-    "name": "TheDonald"
+    "name": "TheDonald",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 7,
-    "name": "FeelTheBern2016"
+    "name": "FeelTheBern2016",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 8,
-    "name": "Teddy323"
+    "name": "Teddy323",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 9,
-    "name": "iLuvAlaska"
+    "name": "iLuvAlaska",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 10,
-    "name": "KasichForPresident16"
+    "name": "KasichForPresident16",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }, {
     "profileId": 11,
-    "name": "Stallion08"
+    "name": "Stallion08",
+    "joined": "5 months",
+    "lastSeen": "Saturday afternoon",
+    "activityLevel": 0.66,
+    "summary": {
+        "peers": 46,
+        "topics": 29,
+        "shared": 19,
+        "asked": 10
+    },
+    "othersJoined": [{
+        "profileId": 4,
+        "name": "HappyLittleMe"
+    }, {
+        "profileId": 11,
+        "name": "idocare08"
+    }, {
+        "profileId": 9,
+        "name": "iLuvAlaska"
+    }],
+    "hot": {
+      "questionId": 2,
+        "title": "Vegan diet in diabetes treatment?",
+        "author": {
+            "profileId": 2,
+            "name": "Andrew"
+        },
+        "source": "The Guardian",
+        "stats": {
+            "related": 33,
+            "peers": 43,
+            "topics": 53,
+            "likes": 63
+        }
+    }
 }]

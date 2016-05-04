@@ -9,49 +9,41 @@
                     $scope.questions = results;
                 })
                 .error(function(results, error) {
-                  $scope.questions = results;
-                  console.log("Error: " + error);
+                    $scope.questions = results;
+                    console.log("Error: " + error);
                 });
 
         })
 
     .controller('ProfileController', function($scope, $routeParams, $http) {
-        // // profiles = [{
-        // //     profileId: 1
-        // // }, {
-        // //     profileId: 2
-        // // }, {
-        // //     profileId: 3
-        // // }, {
-        // //     profileId: 4
-        // // }];
-        // profiles = [1, 2, 3, 4, 5];
-        //
-        // for (i = 0; i < profiles.length; i++) {
-        //   var item = profiles[i];
-        //   if ($routeParams.profileId == item) {
-        //     $scope.profileId = item;
-        //   }
-        //   else {
-        //     $scope.profileId = 99;
-        //   }
-        // }
-        // // $scope.profile = profiles[$routeParams.profileId - 1];
-
+        var profile;
         $http.get('/assets/js/profiles.json')
             .success(function(results) {
                 for (i = 0; i < results.length; i++) {
-                  var item = results[i];
-                  if ($routeParams.profileId == item.profileId) {
-                    $scope.profile = item;
-                    console.log(item);
-                  }
+                    var item = results[i];
+                    if ($routeParams.profileId == item.profileId) {
+                        $scope.profile = item;
+                        profile = item;
+                    }
                 }
             })
             .error(function(result, error) {
                 $scope.profile = "Error";
                 console.log("Error: " + error);
             });
+
+        // $scope.seenDaysAgo = function() {
+        //     var lastSeenYear = parseInt($scope.profile.lastSeen.substring(0, 4));
+        //     var lastSeenMonth = parseInt($scope.profile.lastSeen.substring(5, 7));
+        //     var lastSeenDay = parseInt($scope.profile.lastSeen.substring(8, 10));
+        //     var lastSeenDate = new Date(lastSeenYear, lastSeenMonth, lastSeenDay);
+        //     var currentDate = new Date();
+        //
+        //     var timeDifference = Math.abs(currentDate.getTime() - lastSeenDate.getTime());
+        //     console.log(timeDifference);
+        //     return Math.ceil(timeDiff / 3600 / 1000 / 24);
+        // };
+        // console.log($scope.seenDaysAgo);
     })
 
     .controller('QuestionController', function($scope, $routeParams) {

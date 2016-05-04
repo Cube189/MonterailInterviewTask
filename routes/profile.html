@@ -1,27 +1,33 @@
 <header id="profileHeader">
-    <img ng-src="/assets/res/images/avatars/{{ profile.name }}.png" alt="{{ profile.name }}">
+    <img ng-src="/assets/res/images/avatars/{{ profile.name }}.png" alt="{{ profile.name }}" class="profilePicture">
     <h1>{{ profile.name }}</h1>
     <footer>
         <ul>
-            <li><span>Member for</span> 5 months</li>
-            <li><span>Last seen</span> Saturday afternoon</li>
-            <li><span>Activity level</span> <span class="rating" style="width:66%"><span>66%</span></span></li>
+            <li><span>Member for</span> {{ profile.joined }}</li>
+            <li><span>Last seen</span> {{ profile.lastSeen }}</li>
+            <li><span>Activity level</span> <span class="rating" style="width:{{ profile.activityLevel }}"><span>{{ profile.activityLevel * 100 }}%</span></span></li>
         </ul>
     </footer>
 </header>
 <article id="profile">
     <header>
+      <!-- <nav>
+        <ul>
+          <li id="navPrev"><a ng-href="#/profile/{{ profile.profileId - 1 }}" ng-hide="profile.profileId - 1 <= 0">&#9668;</a></li>
+          <li id="navNext"><a ng-href="#/profile/{{ profile.profileId + 1 }}" ng-hide="">&#9658;</a></li>
+        </ul>
+        <nav> -->
       <hgroup>
         <h1>How it all started</h1>
-        <h2>That's where we have been these 5 months ago</h2>
+        <h2>That's where we have been these {{ profile.joined }}</h2>
       </hgroup>
     </header>
     <div id="summary">
         <ul>
-            <li><em>46</em> peers</li>
-            <li><em>46</em> discussions</li>
-            <li><em>46</em> findings</li>
-            <li><em>46</em> questions</li>
+            <li><em>{{ profile.summary.peers }}</em> peers</li>
+            <li><em>{{ profile.summary.topics }}</em> discussions</li>
+            <li><em>{{ profile.summary.shared }}</em> findings</li>
+            <li><em>{{ profile.summary.asked }}</em> questions</li>
         </ul>
     </div>
     <aside>
@@ -30,9 +36,12 @@
                 <h1>Who joined the platform that same period</h1>
             </header>
             <ul>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
+                <li ng-repeat="user in profile.othersJoined">
+                  <a ng-href="#/profile/{{ user.profileId }}">
+                    <div><img ng-src="/assets/res/images/avatars/{{ user.name }}.png" class="profilePicture" /></div>
+                    <h1>{{ user.name }}</h1>
+                  </a>
+                </li>
             </ul>
         </article>
         <article id="hot">
@@ -42,29 +51,30 @@
 
             <article>
               <header>
-                  <a ng-href="#/profile/{{ hot.author.profileId }}">
-                      <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ hot.author.name }}" />
+                  <a ng-href="#/profile/{{ profile.hot.author.profileId }}">
+                      <img ng-src="assets/res/images/avatars/{{profile.hot.author.name}}.png" alt="{{ profile.hot.author.name }}" class="profilePicture" />
                   </a>
                   <hgroup>
                       <h2>
-                        <a ng-href="#/profile/{{ question.author.profileId }}">{{ hot.author.name }}</a>
-                        found {{ hot.source }} article</h2>
+                        <a ng-href="#/profile/{{ profile.hot.author.profileId }}">{{ profile.hot.author.name }}</a>
+                        found {{ profile.hot.source }} article
+                      </h2>
                       <h1>
-                        <a href="#/question">{{ hot.title }}</a>
+                        <a href="#/question">{{ profile.hot.title }}</a>
                     </h1>
                   </hgroup>
               </header>
               <footer>
                 <ul>
                     <li>
-                        <em>6</em> related discussion</li>
+                        <em>{{ profile.hot.stats.related }}</em> related discussion</li>
                     <li>
-                        <em>3</em> peers involved</li>
+                        <em>{{ profile.hot.stats.peers }}</em> peers involved</li>
                     <li>
-                        <em>3</em> conversations
+                        <em>{{ profile.hot.stats.topics }}</em> conversations
                     </li>
                     <li>
-                        <em>19</em> upvotes
+                        <em>{{ profile.hot.stats.likes }}</em> upvotes
                     </li>
                 </ul>
               </footer>
