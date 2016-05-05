@@ -1,5 +1,3 @@
-You can see the site in action at https://cube189.github.io/MonterailInterviewTask/
-
 This is description of tasks that are used in our evaluation process. We wanted to create an opportunity for you to show us your skills and work style, but also to present knowledge and familiarity of tools and technology - both of HTML markup with CSS stylesheets, and Javascript frameworks.
 
 The project consists of progressive phases, where each task explore more skills and adds more complexity. Actually, only first one is obligatory, but each phase you accomplish works on your account - the more you show us, the better. Whenever you stuck or encounter problems - don't be shy, talk to us, show what's wrong and we will try to help you.
@@ -24,7 +22,7 @@ Provided views pictures: [https://www.dropbox.com/sh/wlby6x6b7f885ey/AABViVRasr_
 
 Font used in design is Rotice, but you're free to use any similar replacement.
 
-**Task 1: Implement views (partially done)**
+**Task 1: Implement views (done)**
 
 Your first task is to implements 3 base views of this project: list of questions (all_questions_base.png), single question view (single_question_base.png) and user profile (profile_base.png). Bottom line is just static view, with HTML markup and CSS stylesheets, however you can connect them with links for easy switching from view to view.
 

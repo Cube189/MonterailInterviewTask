@@ -1,22 +1,32 @@
-<article>
-  <header>
-      <a ng-href="#/profile/{{ question.author.profileId }}">
-          <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ question.author.name }}" />
-      </a>
-      <hgroup>
-          <h2>
-            <a ng-href="#/profile/{{ question.author.profileId }}">{{ question.author.name }}</a>
-            is asking</h2>
-          <h1>
-            <a ng-href="#/question/{{ question.questionId }}">{{ question.title }}</a>
-        </h1>
-      </hgroup>
-  </header>
+<article class="post question">
+    <header>
+        <a ng-href="#/profile/{{ question.author.profileId }}">
+            <img ng-src="assets/res/images/avatars/{{question.author.name}}.png" alt="{{ question.author.name }}" class="profilePicture"/>
+        </a>
+        <hgroup>
+            <h2>
+                <a ng-href="#/profile/{{ question.author.profileId }}">{{ question.author.name }}</a>
+                is asking
+            </h2>
+            <h1>
+                <a ng-href="#/question/{{ question.questionId }}">{{ question.title }}</a>
+            </h1>
+        </hgroup>
+    </header>
+    <p>{{ question.content }}</p>
 </article>
 
 <article class="post" ng-repeat="post in question.activities">
-  <header>
-    <h1>{{ post.author }}</h1>
-  </header>
-  <p>{{ post.content }}</p>
+    <div class="profilePicture">
+        <img ng-src="/assets/res/images/avatars/{{ post.author }}.png"/>
+    </div>
+    <div>
+        <header>
+            <h1>
+                <a ng-href="#/profile/{{ post.profileId }}">{{ post.author }}</a>
+                commented it
+            </h1>
+        </header>
+        <p>{{ post.content }}</p>
+    </div>
 </article>
