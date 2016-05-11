@@ -1,5 +1,5 @@
 <header id="profileHeader">
-    <img ng-src="/assets/res/images/avatars/{{ profile.name }}.png" alt="{{ profile.name }}" class="profilePicture">
+    <img ng-src="assets/res/images/avatars/{{ profile.name }}.png" alt="{{ profile.name }}" class="profilePicture">
     <h1>{{ profile.name }}</h1>
     <footer>
         <ul>
@@ -38,7 +38,7 @@
             <ul>
                 <li ng-repeat="user in profile.othersJoined">
                   <a ng-href="#/profile/{{ user.profileId }}">
-                    <div><img ng-src="/assets/res/images/avatars/{{ user.name }}.png" class="profilePicture" /></div>
+                    <div><img ng-src="assets/res/images/avatars/{{ user.name }}.png" class="profilePicture" /></div>
                     <h1>{{ user.name }}</h1>
                   </a>
                 </li>
