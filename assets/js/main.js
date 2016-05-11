@@ -4,7 +4,7 @@
     // Dynamic data impl (task 4)
     app
         .controller('MainController', function($scope, $routeParams, $http) {
-            $http.get('/assets/js/questions.json')
+            $http.get('assets/js/questions.json')
                 .success(function(results) {
                     $scope.questions = results;
                 })
@@ -17,7 +17,7 @@
 
     .controller('ProfileController', function($scope, $routeParams, $http) {
         var profile;
-        $http.get('/assets/js/profiles.json')
+        $http.get('assets/js/profiles.json')
             .success(function(results) {
                 for (i = 0; i < results.length; i++) {
                     var item = results[i];
@@ -47,7 +47,7 @@
     })
 
     .controller('QuestionController', function($scope, $routeParams, $http) {
-        $http.get('/assets/js/questions.json')
+        $http.get('assets/js/questions.json')
             .success(function(results) {
                 for (i = 0; i < results.length; i++) {
                     var item = results[i];
@@ -86,14 +86,14 @@
     app.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '../routes/home.html',
+                templateUrl: 'routes/home.html',
             })
             .when('/question/:questionId', {
-                templateUrl: '../routes/question.html',
+                templateUrl: 'routes/question.html',
                 controller: 'QuestionController'
             })
             .when('/profile/:profileId', {
-                templateUrl: '../routes/profile.html',
+                templateUrl: 'routes/profile.html',
                 controller: 'ProfileController'
             })
             .otherwise({
