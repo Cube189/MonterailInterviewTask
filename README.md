@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/257170e40b4e4e9fbc8ceb263d5f6513)](https://www.codacy.com/app/Cube189/MonterailInterviewTask?utm_source=github.com&utm_medium=referral&utm_content=Cube189/MonterailInterviewTask&utm_campaign=badger)
+
 This is description of tasks that are used in our evaluation process. We wanted to create an opportunity for you to show us your skills and work style, but also to present knowledge and familiarity of tools and technology - both of HTML markup with CSS stylesheets, and Javascript frameworks.
 
 The project consists of progressive phases, where each task explore more skills and adds more complexity. Actually, only first one is obligatory, but each phase you accomplish works on your account - the more you show us, the better. Whenever you stuck or encounter problems - don't be shy, talk to us, show what's wrong and we will try to help you.
